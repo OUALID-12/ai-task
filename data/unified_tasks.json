@@ -7898,5 +7898,128 @@
       }
     ],
     "comments": []
+  },
+  {
+    "id": "task_meeting_20250913_052240_7951f666",
+    "description": "Points discutés pendant la réunion",
+    "responsable": "Non spécifié",
+    "deadline": "Non spécifié",
+    "priorite": "Non spécifié",
+    "statut": "pending",
+    "confiance_ia": 0.9,
+    "source": "meeting",
+    "type": "explicite",
+    "tags": [],
+    "created_at": "2025-09-13T05:22:40.163288",
+    "updated_at": "2025-09-13T05:22:40.163295",
+    "source_metadata": {
+      "meeting_id": "meeting_transcription_20250913_052237",
+      "meeting_titre": "Réunion sans titre",
+      "meeting_date": "2025-09-13",
+      "meeting_participants": [
+        "Participant inconnu"
+      ],
+      "original_meeting": {
+        "titre": "Réunion sans titre",
+        "date": "2025-09-13",
+        "organisateur": "Non spécifié",
+        "participants": [
+          "Participant inconnu"
+        ],
+        "departement": "Non spécifié",
+        "projet": "",
+        "type_reunion": "general"
+      }
+    },
+    "history": [
+      {
+        "action": "created",
+        "timestamp": "2025-09-13T05:22:40.163297",
+        "details": "Tâche créée depuis meeting"
+      }
+    ],
+    "comments": []
+  },
+  {
+    "id": "task_meeting_20250913_052316_f01914b1",
+    "description": "Points discutés pendant la réunion",
+    "responsable": "Non spécifié",
+    "deadline": "",
+    "priorite": "",
+    "statut": "pending",
+    "confiance_ia": 0.9,
+    "source": "meeting",
+    "type": "explicite",
+    "tags": [],
+    "created_at": "2025-09-13T05:23:16.100237",
+    "updated_at": "2025-09-13T05:23:16.100246",
+    "source_metadata": {
+      "meeting_id": "meeting_transcription_20250913_052314",
+      "meeting_titre": "Réunion sans titre",
+      "meeting_date": "2025-09-13",
+      "meeting_participants": [
+        "Participant inconnu"
+      ],
+      "original_meeting": {
+        "titre": "Réunion sans titre",
+        "date": "2025-09-13",
+        "organisateur": "Non spécifié",
+        "participants": [
+          "Participant inconnu"
+        ],
+        "departement": "Non spécifié",
+        "projet": "",
+        "type_reunion": "general"
+      }
+    },
+    "history": [
+      {
+        "action": "created",
+        "timestamp": "2025-09-13T05:23:16.100249",
+        "details": "Tâche créée depuis meeting"
+      }
+    ],
+    "comments": []
+  },
+  {
+    "id": "task_meeting_20250913_052454_c20d3bfe",
+    "description": "Points discutés pendant la réunion",
+    "responsable": "Non spécifié (Organisateur)",
+    "deadline": "2025-09-13",
+    "priorite": "",
+    "statut": "pending",
+    "confiance_ia": 0.9,
+    "source": "meeting",
+    "type": "explicite",
+    "tags": [],
+    "created_at": "2025-09-13T05:24:54.731934",
+    "updated_at": "2025-09-13T05:24:54.731940",
+    "source_metadata": {
+      "meeting_id": "meeting_transcription_20250913_052452",
+      "meeting_titre": "Réunion sans titre",
+      "meeting_date": "2025-09-13",
+      "meeting_participants": [
+        "Participant inconnu"
+      ],
+      "original_meeting": {
+        "titre": "Réunion sans titre",
+        "date": "2025-09-13",
+        "organisateur": "Non spécifié",
+        "participants": [
+          "Participant inconnu"
+        ],
+        "departement": "Non spécifié",
+        "projet": "",
+        "type_reunion": "general"
+      }
+    },
+    "history": [
+      {
+        "action": "created",
+        "timestamp": "2025-09-13T05:24:54.731943",
+        "details": "Tâche créée depuis meeting"
+      }
+    ],
+    "comments": []
   }
 ]

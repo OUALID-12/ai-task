@@ -51,10 +51,10 @@ const Sidebar: React.FC = () => {
       description: 'Gestion complète'
     },
     {
-      name: 'Tags',
-      href: '/tags',
-      icon: Tag,
-      description: 'Organisation'
+      name: 'Meeting',
+      href: '/meetings',
+      icon: Bell,
+      description: 'Réunions'
     }
   ];
 

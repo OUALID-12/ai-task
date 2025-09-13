@@ -190,5 +190,29 @@
         "nb_taches": 3,
         "erreur": "",
         "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-09-13T05:22:40.185106",
+        "meeting_id": "meeting_transcription_20250913_052237",
+        "statut": "succès",
+        "nb_taches": 1,
+        "erreur": "",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-09-13T05:23:16.132244",
+        "meeting_id": "meeting_transcription_20250913_052314",
+        "statut": "succès",
+        "nb_taches": 1,
+        "erreur": "",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-09-13T05:24:54.767554",
+        "meeting_id": "meeting_transcription_20250913_052452",
+        "statut": "succès",
+        "nb_taches": 1,
+        "erreur": "",
+        "type_traitement": "meeting_processing"
     }
 ]

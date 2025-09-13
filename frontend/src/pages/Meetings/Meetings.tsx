@@ -614,12 +614,74 @@ const UploadModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     departement: '',
     transcription: ''
   });
+  const [file, setFile] = useState<File | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const queryClient = useQueryClient();
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implémenter l'upload vers le backend
-    console.log('Upload data:', formData);
-    onClose();
+    setLoading(true);
+    setError(null);
+    setSuccess(null);
+
+    try {
+      let result;
+
+      if (file) {
+        // Upload avec fichier
+        const uploadFormData = new FormData();
+        uploadFormData.append('file', file);
+        uploadFormData.append('titre', formData.titre);
+        uploadFormData.append('departement', formData.departement);
+        uploadFormData.append('type_reunion', formData.type_reunion);
+        uploadFormData.append('date_reunion', formData.date_reunion);
+
+        result = await apiService.uploadMeetingTranscription(uploadFormData);
+      } else if (formData.transcription.trim()) {
+        // Upload avec transcription texte
+        const transcriptionData = {
+          titre: formData.titre,
+          transcription: formData.transcription,
+          date_reunion: formData.date_reunion,
+          organisateur: 'Utilisateur', // Default organizer
+          departement: formData.departement,
+          projet_associe: 'Projet général', // Default project
+          type_reunion: formData.type_reunion
+        };
+
+        result = await apiService.processMeetingTranscription(transcriptionData);
+      } else {
+        throw new Error('Veuillez saisir une transcription ou sélectionner un fichier');
+      }
+
+      setSuccess(`Réunion traitée avec succès ! ${result.data.tasks_extracted || 0} tâches extraites.`);
+
+      // Reset form
+      setFormData({
+        titre: '',
+        date_reunion: '',
+        type_reunion: 'general',
+        departement: '',
+        transcription: ''
+      });
+      setFile(null);
+
+      // Refresh meetings data
+      queryClient.invalidateQueries({ queryKey: ['meetings'] });
+
+      // Close modal after success
+      setTimeout(() => {
+        onClose();
+      }, 2000);
+
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Erreur lors du traitement de la réunion');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

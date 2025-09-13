@@ -572,5 +572,77 @@
             "projet": "Système Unifié",
             "type_reunion": "planification"
         }
+    },
+    {
+        "description": "Points discutés pendant la réunion",
+        "responsable": "Non spécifié",
+        "deadline": "Non spécifié",
+        "priorite": "Non spécifié",
+        "meeting_id": "meeting_transcription_20250913_052237",
+        "meeting_titre": "Réunion sans titre",
+        "meeting_date": "2025-09-13",
+        "meeting_participants": [
+            "Participant inconnu"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "Réunion sans titre",
+            "date": "2025-09-13",
+            "organisateur": "Non spécifié",
+            "participants": [
+                "Participant inconnu"
+            ],
+            "departement": "Non spécifié",
+            "projet": "",
+            "type_reunion": "general"
+        }
+    },
+    {
+        "description": "Points discutés pendant la réunion",
+        "responsable": "Non spécifié",
+        "deadline": "",
+        "priorite": "",
+        "meeting_id": "meeting_transcription_20250913_052314",
+        "meeting_titre": "Réunion sans titre",
+        "meeting_date": "2025-09-13",
+        "meeting_participants": [
+            "Participant inconnu"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "Réunion sans titre",
+            "date": "2025-09-13",
+            "organisateur": "Non spécifié",
+            "participants": [
+                "Participant inconnu"
+            ],
+            "departement": "Non spécifié",
+            "projet": "",
+            "type_reunion": "general"
+        }
+    },
+    {
+        "description": "Points discutés pendant la réunion",
+        "responsable": "Non spécifié (Organisateur)",
+        "deadline": "2025-09-13",
+        "priorite": "",
+        "meeting_id": "meeting_transcription_20250913_052452",
+        "meeting_titre": "Réunion sans titre",
+        "meeting_date": "2025-09-13",
+        "meeting_participants": [
+            "Participant inconnu"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "Réunion sans titre",
+            "date": "2025-09-13",
+            "organisateur": "Non spécifié",
+            "participants": [
+                "Participant inconnu"
+            ],
+            "departement": "Non spécifié",
+            "projet": "",
+            "type_reunion": "general"
+        }
     }
 ]
