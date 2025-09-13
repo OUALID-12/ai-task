@@ -8,17 +8,22 @@ import {
   Bell,
   Settings,
   Calendar,
-  Activity
+  Activity,
+  LogOut,
+  ChevronDown
 } from 'lucide-react';
 import { useUnreadNotifications } from '../../stores/appStore';
 import { Badge } from '../ui';
+import { useAuth } from '../../contexts/AuthContext';
 
 const Sidebar: React.FC = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
   const unreadNotifications = useUnreadNotifications();
   const navigate = useNavigate();
   const location = useLocation();
+  const { logout } = useAuth();
 
   console.log('Sidebar: Component rendered, current location:', location.pathname);
   console.log('Sidebar: navigate function available:', !!navigate);
@@ -106,6 +111,11 @@ const Sidebar: React.FC = () => {
     );
   };
 
+  const handleLogout = () => {
+    logout();
+    navigate('/'); // Redirect to login page after logout
+  };
+
   return (
     <>
       {/* Bouton menu mobile - SEULEMENT VISIBLE SUR MOBILE */}
@@ -189,20 +199,31 @@ const Sidebar: React.FC = () => {
         {/* Footer - DESIGN MODERNE */}
         <div className="p-4 border-t border-gray-200 bg-gradient-to-r from-red-50 to-white">
           {(!isCollapsed || !isDesktop) ? (
-            <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-red-100 transition-colors cursor-pointer border border-red-100">
+            <div className="relative flex items-center space-x-3 p-3 rounded-lg hover:bg-red-100 transition-colors cursor-pointer border border-red-100" onClick={() => setShowMenu(!showMenu)}>
               <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center shadow-md">
-                <span className="text-sm font-bold text-white">U</span>
+                <span className="text-sm font-bold text-white">O</span>
               </div>
               <div className="flex-1 min-w-0">
                 <div className="text-sm font-semibold text-gray-800 truncate">Utilisateur</div>
-                <div className="text-xs text-gray-600 truncate">user@example.com</div>
+                <div className="text-xs text-gray-600 truncate">oualid@gmail.com</div>
               </div>
-              <Settings size={18} className="text-gray-500 hover:text-red-600 transition-colors" />
+              <ChevronDown size={18} className="text-gray-500 hover:text-red-600 transition-colors" />
+              {showMenu && (
+                <div className="absolute bottom-full mb-2 right-0 w-40 bg-white border border-gray-200 rounded-md shadow-lg z-50">
+                  <button
+                    onClick={handleLogout}
+                    className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-red-100"
+                  >
+                    <LogOut size={16} className="mr-2" />
+                    Logout
+                  </button>
+                </div>
+              )}
             </div>
           ) : (
             <div className="flex justify-center">
               <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center cursor-pointer hover:bg-red-700 transition-colors shadow-md">
-                <span className="text-sm font-bold text-white">U</span>
+                <span className="text-sm font-bold text-white">O</span>
               </div>
             </div>
           )}

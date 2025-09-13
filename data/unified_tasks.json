@@ -4291,8 +4291,8 @@
     "description": "Tâche à Compléter - Test de complétion de tâche",
     "responsable": "user",
     "deadline": null,
-    "priorite": "medium",
-    "statut": "completed",
+    "priorite": "urgent",
+    "statut": "in_progress",
     "confiance_ia": 0.8,
     "source": "manual_api",
     "type": "explicite",
@@ -4301,7 +4301,7 @@
       "completion"
     ],
     "created_at": "2025-08-12T16:37:43.790894",
-    "updated_at": "2025-08-12T16:37:45.892874",
+    "updated_at": "2025-09-13T07:33:30.247913",
     "source_metadata": {
       "title": "Tâche à Compléter",
       "description": "Test de complétion de tâche",
@@ -4319,6 +4319,18 @@
         "timestamp": "2025-08-12T16:37:45.892878",
         "user": "user",
         "details": "Tâche terminée avec succès"
+      },
+      {
+        "action": "priority_changed",
+        "timestamp": "2025-09-13T07:33:15.211052",
+        "user": "user",
+        "details": "Priorité modifiée: medium → urgent"
+      },
+      {
+        "action": "updated_complete",
+        "timestamp": "2025-09-13T07:33:30.247964",
+        "user": "user",
+        "details": "Modification complète. Changements: statut: 'completed' → 'in_progress', department: 'None' → ''"
       }
     ],
     "comments": [],
@@ -4326,7 +4338,8 @@
     "completed_at": "2025-08-12T16:37:45.892855",
     "completed_by": "user",
     "completion_notes": null,
-    "progress": 100
+    "progress": 100,
+    "department": ""
   },
   {
     "id": "task_manual_api_20250812_170813_bf86759c",
