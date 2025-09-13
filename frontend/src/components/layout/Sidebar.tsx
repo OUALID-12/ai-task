@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { 
-  Home, 
-  CheckSquare, 
-  Menu, 
+import {
+  Home,
+  CheckSquare,
+  Menu,
   X,
   Bell,
   Settings,
-  Tag
+  Tag,
+  Activity
 } from 'lucide-react';
 import { useUnreadNotifications } from '../../stores/appStore';
 import { Badge } from '../ui';
@@ -137,9 +138,12 @@ const Sidebar: React.FC = () => {
         {/* Header Sidebar - DESIGN ROUGE SUR BLANC */}
         <div className="flex items-center justify-between p-6 border-b border-gray-200 bg-gradient-to-r from-red-50 to-white">
           {!isCollapsed && (
-            <div>
-              <h2 className="text-xl font-bold text-red-700">AI Tasks</h2>
-              <p className="text-sm text-gray-600 font-medium">Extraction System</p>
+            <div className="flex items-center space-x-2">
+              <Activity size={24} className="text-red-600" />
+              <div>
+                <h2 className="text-xl font-bold text-red-700">AI Tasks</h2>
+                <p className="text-sm text-gray-600 font-medium">Extraction System</p>
+              </div>
             </div>
           )}
           
