@@ -1,4 +1,4 @@
-
+// frontend/src/App.tsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import Dashboard31 from './pages/Dashboard31';
