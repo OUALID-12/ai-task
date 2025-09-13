@@ -23,21 +23,21 @@ export const TaskEditTopSheet: React.FC<TaskEditTopSheetProps> = ({
   const [successMessage, setSuccessMessage] = useState('');
 
   // États pour modifications partielles
-  const [priority, setPriority] = useState(task.priorite);
+  const [priority, setPriority] = useState(task.priorite || 'medium');
   const [deadline, setDeadline] = useState(task.deadline ? task.deadline.split('T')[0] : '');
-  const [description, setDescription] = useState(task.description);
-  const [department, setDepartment] = useState(task.department);
+  const [description, setDescription] = useState(task.description || '');
+  const [department, setDepartment] = useState(task.department || '');
   const [newTag, setNewTag] = useState('');
   const [tags, setTags] = useState<string[]>(task.tags || []);
 
   // États pour modification complète
   const [completeForm, setCompleteForm] = useState({
-    description: task.description,
-    responsable: task.responsable,
-    priorite: task.priorite,
-    statut: task.statut,
+    description: task.description || '',
+    responsable: task.responsable || '',
+    priorite: task.priorite || 'medium',
+    statut: task.statut || 'pending',
     deadline: task.deadline ? task.deadline.split('T')[0] : '',
-    department: task.department,
+    department: task.department || '',
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -45,19 +45,19 @@ export const TaskEditTopSheet: React.FC<TaskEditTopSheetProps> = ({
   useEffect(() => {
     if (isOpen) {
       // Reset form when opening
-      setPriority(task.priorite);
+      setPriority(task.priorite || 'medium');
       setDeadline(task.deadline ? task.deadline.split('T')[0] : '');
-      setDescription(task.description);
-      setDepartment(task.department);
+      setDescription(task.description || '');
+      setDepartment(task.department || '');
       setTags(task.tags || []);
       setSelectedModificationType('');
       setCompleteForm({
-        description: task.description,
-        responsable: task.responsable,
-        priorite: task.priorite,
-        statut: task.statut,
+        description: task.description || '',
+        responsable: task.responsable || '',
+        priorite: task.priorite || 'medium',
+        statut: task.statut || 'pending',
         deadline: task.deadline ? task.deadline.split('T')[0] : '',
-        department: task.department,
+        department: task.department || '',
       });
       setErrors({});
       setSuccessMessage('');
@@ -77,7 +77,7 @@ export const TaskEditTopSheet: React.FC<TaskEditTopSheetProps> = ({
 
     setIsSubmitting(true);
     try {
-      const response = await fetch(`http://localhost:8002/tasks/${task.id}/priority`, {
+      const response = await fetch(`http://localhost:8000/tasks/${task.id}/priority`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ priority }),
@@ -102,9 +102,10 @@ export const TaskEditTopSheet: React.FC<TaskEditTopSheetProps> = ({
 
     setIsSubmitting(true);
     try {
-      const response = await fetch(`http://localhost:8002/tasks/${task.id}/deadline?deadline=${deadline || ''}`, {
+      const response = await fetch(`http://localhost:8000/tasks/${task.id}/deadline`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ deadline: deadline || null }),
       });
 
       if (response.ok) {
@@ -126,7 +127,7 @@ export const TaskEditTopSheet: React.FC<TaskEditTopSheetProps> = ({
 
     setIsSubmitting(true);
     try {
-      const response = await fetch(`http://localhost:8002/tasks/${task.id}/description`, {
+      const response = await fetch(`http://localhost:8000/tasks/${task.id}/description`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ description }),
@@ -150,9 +151,10 @@ export const TaskEditTopSheet: React.FC<TaskEditTopSheetProps> = ({
 
     setIsSubmitting(true);
     try {
-      const response = await fetch(`http://localhost:8002/tasks/${task.id}/department?department=${encodeURIComponent(department)}`, {
+      const response = await fetch(`http://localhost:8000/tasks/${task.id}/department`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ department: department || null }),
       });
 
       if (response.ok) {
@@ -180,7 +182,7 @@ export const TaskEditTopSheet: React.FC<TaskEditTopSheetProps> = ({
 
     setIsSubmitting(true);
     try {
-      const response = await fetch(`http://localhost:8002/tasks/${task.id}/tags`, {
+      const response = await fetch(`http://localhost:8000/tasks/${task.id}/tags`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ tags: [tag] }),
@@ -205,7 +207,7 @@ export const TaskEditTopSheet: React.FC<TaskEditTopSheetProps> = ({
   const handleRemoveTag = async (tagToRemove: string) => {
     setIsSubmitting(true);
     try {
-      const response = await fetch(`http://localhost:8002/tasks/${task.id}/tags/${tagToRemove}`, {
+      const response = await fetch(`http://localhost:8000/tasks/${task.id}/tags/${tagToRemove}`, {
         method: 'DELETE',
       });
 
@@ -227,7 +229,7 @@ export const TaskEditTopSheet: React.FC<TaskEditTopSheetProps> = ({
   const handleCompleteUpdate = async () => {
     setIsSubmitting(true);
     try {
-      const response = await fetch(`http://localhost:8002/tasks/${task.id}`, {
+      const response = await fetch(`http://localhost:8000/tasks/${task.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

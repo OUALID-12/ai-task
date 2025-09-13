@@ -5308,20 +5308,21 @@
   },
   {
     "id": "task_manual_api_20250819_100500_97880592",
-    "description": "Tâche à Compléter - Test de complétion de tâche",
+    "description": "Tâche à Compléter - Test de complétion de tâche ddd",
     "responsable": "user",
-    "deadline": null,
-    "priorite": "medium",
+    "deadline": "2030-02-12",
+    "priorite": "high",
     "statut": "rejected",
     "confiance_ia": 0.8,
     "source": "manual_api",
     "type": "explicite",
     "tags": [
-      "completion",
-      "test"
+      "aaaa",
+      "test",
+      "completion"
     ],
     "created_at": "2025-08-19T10:05:00.266304",
-    "updated_at": "2025-09-13T03:19:13.810923",
+    "updated_at": "2025-09-13T06:46:49.248069",
     "source_metadata": {
       "title": "Tâche à Compléter",
       "description": "Test de complétion de tâche",
@@ -5357,6 +5358,36 @@
         "timestamp": "2025-09-13T03:19:13.810923",
         "user": ";l",
         "details": "Commentaire ajouté: ';'';';'"
+      },
+      {
+        "action": "priority_changed",
+        "timestamp": "2025-09-13T06:41:03.165870",
+        "user": "user",
+        "details": "Priorité modifiée: medium → high"
+      },
+      {
+        "action": "tags_added",
+        "timestamp": "2025-09-13T06:41:22.201521",
+        "user": "user",
+        "details": "Tags ajoutés: aaaa"
+      },
+      {
+        "action": "department_changed",
+        "timestamp": "2025-09-13T06:41:32.719977",
+        "user": "user",
+        "details": "Département modifié: non défini → rh"
+      },
+      {
+        "action": "description_changed",
+        "timestamp": "2025-09-13T06:41:43.504338",
+        "user": "user",
+        "details": "Description modifiée: 'Tâche à Compléter - Test de complétion de tâche' → 'Tâche à Compléter - Test de complétion de tâche dd...'"
+      },
+      {
+        "action": "deadline_changed",
+        "timestamp": "2025-09-13T06:46:49.248086",
+        "user": "user",
+        "details": "Échéance modifiée: non définie → 2030-02-12"
       }
     ],
     "comments": [
@@ -5372,7 +5403,7 @@
     "completed_by": "user",
     "completion_notes": null,
     "progress": 100,
-    "department": null,
+    "department": "rh",
     "rejected": true,
     "validation_status": "rejected",
     "rejected_at": "2025-08-29T12:01:56.237325",
@@ -5384,7 +5415,7 @@
     "description": "description mise à jour",
     "responsable": "test.user@example.com",
     "deadline": "2025-09-21",
-    "priorite": "low",
+    "priorite": "medium",
     "statut": "rejected",
     "confiance_ia": 0.8,
     "source": "manual_api",
@@ -5395,7 +5426,7 @@
       "test"
     ],
     "created_at": "2025-08-19T15:28:10.032693",
-    "updated_at": "2025-09-13T03:49:38.014295",
+    "updated_at": "2025-09-13T06:30:10.572251",
     "source_metadata": {
       "title": "Tâche Test Actions",
       "description": "Test validation/rejet/complétion",
@@ -5527,6 +5558,30 @@
         "timestamp": "2025-09-13T03:49:38.014295",
         "user": "gfhjbknlm;,'.",
         "details": "Commentaire ajouté: 'vcbnmj,k.l/.;'"
+      },
+      {
+        "action": "priority_changed",
+        "timestamp": "2025-09-13T06:25:12.252186",
+        "user": "user",
+        "details": "Priorité modifiée: low → high"
+      },
+      {
+        "action": "priority_changed",
+        "timestamp": "2025-09-13T06:29:17.098241",
+        "user": "user",
+        "details": "Priorité modifiée: high → low"
+      },
+      {
+        "action": "priority_changed",
+        "timestamp": "2025-09-13T06:29:23.484598",
+        "user": "user",
+        "details": "Priorité modifiée: low → medium"
+      },
+      {
+        "action": "department_changed",
+        "timestamp": "2025-09-13T06:30:10.572263",
+        "user": "user",
+        "details": "Département modifié: rh → rp"
       }
     ],
     "comments": [
@@ -5540,7 +5595,7 @@
     "validated": true,
     "validated_at": "2025-08-19T15:28:12.116869",
     "validated_by": "user",
-    "department": "rh",
+    "department": "rp",
     "rejected": true,
     "rejected_at": "2025-08-29T09:40:47.497020",
     "rejected_by": "user",
