@@ -205,7 +205,7 @@ class TaskUpdateComplete(BaseModel):
     """Modèle pour modification complète d'une tâche (PUT)"""
     description: str = Field(..., min_length=3, max_length=500)
     responsable: str = Field(..., min_length=1, max_length=100)
-    priorite: str = Field(..., pattern="^(high|medium|low)$")
+    priorite: str = Field(..., pattern="^(high|medium|low|urgent)$")
     statut: str = Field(..., pattern="^(pending|in_progress|completed|cancelled|rejected)$")
     deadline: Optional[str] = Field(None, pattern=r"^(\d{4}-\d{2}-\d{2})?$")
     department: Optional[str] = Field(None, max_length=50)
@@ -362,7 +362,7 @@ class TaskCreate(BaseModel):
 # 🔧 MODÈLES POUR MODIFICATIONS PARTIELLES
 class TaskPriorityUpdate(BaseModel):
     """Modèle pour modification de priorité"""
-    priority: str = Field(..., pattern="^(high|medium|low)$")
+    priority: str = Field(..., pattern="^(high|medium|low|urgent)$")
 
 class TaskDescriptionUpdate(BaseModel):
     """Modèle pour modification de description"""

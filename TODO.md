@@ -1,14 +1,15 @@
-# TODO: Update SimpleDashboard Component
+# Task Update Fixes - TODO
 
-## Tasks
-- [x] Import React hooks (useState, useEffect) and API service methods
-- [x] Add state variables for dashboard metrics and system health
-- [x] Implement useEffect to fetch data on component mount
-- [x] Update dashboard cards to display live data instead of static values
-- [x] Fix or remove the test API button to use correct API URL
-- [ ] Test the updated dashboard component
+## Completed ✅
+- [x] Fixed handleDepartmentChange to send department in JSON body instead of query parameters
+- [x] Verified handleCompleteUpdate sends all required fields correctly
+- [x] Ensured deadline field is handled properly (null or valid date string)
 
-## Status
-- [x] Plan confirmed by user
-- [x] Implementation completed
-- [ ] Testing in progress
+## Next Steps
+- [ ] Test the department update PATCH request to confirm no more 400 errors
+- [ ] Test the complete task update PUT request to confirm no more 400 errors
+- [ ] Verify all partial update endpoints work correctly
+
+## Summary of Changes
+- Updated `handleDepartmentChange` in TaskEditTopSheet.tsx to send department as JSON body
+- Confirmed `handleCompleteUpdate` properly handles all required fields including deadline as null or valid date
