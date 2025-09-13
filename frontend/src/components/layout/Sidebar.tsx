@@ -7,7 +7,7 @@ import {
   X,
   Bell,
   Settings,
-  Tag,
+  Calendar,
   Activity
 } from 'lucide-react';
 import { useUnreadNotifications } from '../../stores/appStore';
@@ -52,10 +52,10 @@ const Sidebar: React.FC = () => {
       description: 'Gestion complète'
     },
     {
-      name: 'Tags',
-      href: '/tags',
-      icon: Tag,
-      description: 'Organisation'
+      name: 'Réunions',
+      href: '/meetings',
+      icon: Calendar,
+      description: 'Gestion des réunions'
     }
   ];
 
