@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 import { Mail, Lock, LogIn } from 'lucide-react';
 
-const Login: React.FC<{ onLoginSuccess: () => void }> = ({ onLoginSuccess }) => {
+const Login: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (email === 'oualid@gmail.com' && password === 'oualid123') {
+    if (login(email, password)) {
       setError('');
-      onLoginSuccess();
       navigate('/');
     } else {
       setError('Invalid email or password');
