@@ -1,0 +1,576 @@
+import React, { useState, useEffect } from 'react';
+import { Plus, Search, Tag as TagIcon, TrendingUp, BarChart3, Edit, Trash2, Eye, Sparkles } from 'lucide-react';
+import { useTags } from '../../hooks/useTags';
+import { useTagStats } from '../../hooks/useTagStats';
+import { useTagSuggestions } from '../../hooks/useTagSuggestions';
+import { LoadingState, ErrorState } from '../../components/ui';
+import { StatCard } from '../../components/dashboard/StatCard';
+
+interface Tag {
+  name: string;
+  usage_count: number;
+  tasks_count: number;
+  last_used?: string;
+  color?: string;
+}
+
+const TagsPage: React.FC = () => {
+  console.log('TagsPage: Component mounted/updated');
+
+  useEffect(() => {
+    console.log('TagsPage: useEffect triggered');
+    return () => {
+      console.log('TagsPage: Component will unmount');
+    };
+  }, []);
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedTag, setSelectedTag] = useState<Tag | null>(null);
+  const [showCreateModal, setShowCreateModal] = useState(false);
+  const [showEditModal, setShowEditModal] = useState(false);
+  const [showTasksModal, setShowTasksModal] = useState(false);
+  const [filterType, setFilterType] = useState<'all' | 'popular' | 'recent'>('all');
+  const [suggestionInput, setSuggestionInput] = useState('');
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+
+  // Hooks pour récupérer les données
+  const { data: allTags, isLoading: tagsLoading, error: tagsError, refetch: refetchTags } = useTags();
+  const { data: tagStats, isLoading: statsLoading } = useTagStats();
+  const { data: tagSuggestions = [] } = useTagSuggestions(suggestionInput);
+
+  // Update suggestions when input changes
+  useEffect(() => {
+    if (suggestionInput.trim()) {
+      setSuggestions(tagSuggestions);
+    } else {
+      setSuggestions([]);
+    }
+  }, [tagSuggestions, suggestionInput]);
+
+  // Filtrage des tags
+  const filteredTags = React.useMemo(() => {
+    if (!allTags) return [];
+
+    let filtered = allTags.filter((tag: Tag) =>
+      tag.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    switch (filterType) {
+      case 'popular':
+        filtered = filtered.sort((a: Tag, b: Tag) => b.usage_count - a.usage_count);
+        break;
+      case 'recent':
+        filtered = filtered.sort((a: Tag, b: Tag) => {
+          if (!a.last_used && !b.last_used) return 0;
+          if (!a.last_used) return 1;
+          if (!b.last_used) return -1;
+          return new Date(b.last_used).getTime() - new Date(a.last_used).getTime();
+        });
+        break;
+      default:
+        filtered = filtered.sort((a: Tag, b: Tag) => a.name.localeCompare(b.name));
+    }
+
+    return filtered;
+  }, [allTags, searchTerm, filterType]);
+
+  // Gestionnaire pour voir les tâches d'un tag
+  const handleViewTasks = (tag: Tag) => {
+    setSelectedTag(tag);
+    setShowTasksModal(true);
+  };
+
+  // Gestionnaire pour éditer un tag
+  const handleEditTag = (tag: Tag) => {
+    setSelectedTag(tag);
+    setShowEditModal(true);
+  };
+
+  // Gestionnaire pour supprimer un tag
+  const handleDeleteTag = async (tag: Tag) => {
+    if (window.confirm(`Êtes-vous sûr de vouloir supprimer le tag "${tag.name}" ?`)) {
+      // TODO: Implémenter la suppression
+      console.log('Suppression du tag:', tag.name);
+      refetchTags();
+    }
+  };
+
+  if (tagsLoading || statsLoading) {
+    return <LoadingState message="Chargement des tags..." className="min-h-96" />;
+  }
+
+  if (tagsError) {
+    return <ErrorState message="Erreur lors du chargement des tags" onRetry={refetchTags} />;
+  }
+
+  return (
+    <div className="w-full h-full flex flex-col space-y-6">
+      {/* En-tête avec statistiques */}
+      <div className="flex-shrink-0">
+        <div className="flex justify-between items-start mb-6">
+          <div>
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
+              🏷️ Gestion des Tags
+            </h1>
+            <p className="text-gray-600 mt-2">
+              Organisez et gérez vos tags pour une meilleure classification des tâches
+            </p>
+          </div>
+          <button
+            onClick={() => setShowCreateModal(true)}
+            className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg flex items-center gap-2"
+          >
+            <Plus className="w-4 h-4" />
+            Nouveau Tag
+          </button>
+        </div>
+
+        {/* Statistiques principales */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <StatCard
+            title="Total Tags"
+            value={tagStats?.total_tags || 0}
+            icon={<TagIcon className="w-5 h-5" />}
+            variant="primary"
+          />
+          <StatCard
+            title="Tags Populaires"
+            value={tagStats?.popular_tags_count || 0}
+            icon={<TrendingUp className="w-5 h-5" />}
+            variant="success"
+          />
+          <StatCard
+            title="Tâches Taguées"
+            value={tagStats?.tagged_tasks_count || 0}
+            icon={<BarChart3 className="w-5 h-5" />}
+            variant="warning"
+          />
+          <StatCard
+            title="Utilisation Moyenne"
+            value={`${tagStats?.average_usage || 0} tâches/tag`}
+            icon={<BarChart3 className="w-5 h-5" />}
+            variant="danger"
+          />
+        </div>
+      </div>
+
+      {/* Section Suggestions de Tags */}
+      <div className="bg-white rounded-lg shadow p-6 flex-shrink-0">
+        <div className="flex items-center gap-2 mb-4">
+          <Sparkles className="w-5 h-5 text-purple-600" />
+          <h2 className="text-lg font-semibold text-gray-900">Suggestions Intelligentes</h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-medium mb-2">Description de tâche</label>
+            <input
+              type="text"
+              placeholder="Décrivez votre tâche pour obtenir des suggestions..."
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              value={suggestionInput}
+              onChange={(e) => setSuggestionInput(e.target.value)}
+            />
+          </div>
+
+          <div className="flex items-end">
+            <div className="w-full text-sm text-gray-500">
+              {suggestionInput.trim() ? (
+                <span className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                  Suggestions mises à jour automatiquement
+                </span>
+              ) : (
+                'Tapez une description pour voir les suggestions'
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Suggestions affichées */}
+        {suggestions.length > 0 && (
+          <div className="mt-4">
+            <h3 className="text-sm font-medium mb-2">Tags suggérés :</h3>
+            <div className="flex flex-wrap gap-2">
+              {suggestions.map((tag, index) => (
+                <span
+                  key={index}
+                  className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-purple-100 text-purple-800 border border-purple-200"
+                >
+                  <TagIcon className="w-3 h-3 mr-1" />
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Contenu principal */}
+      <div className="flex-1 bg-white rounded-lg shadow overflow-hidden">
+        <div className="p-6 border-b border-gray-200">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4">
+            <h2 className="text-lg font-semibold text-gray-900">
+              Tags ({filteredTags.length})
+            </h2>
+          </div>
+
+          {/* Barre de recherche et filtres */}
+          <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex-1 relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+              <input
+                type="text"
+                placeholder="Rechercher des tags..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              />
+            </div>
+
+            <div className="flex gap-2">
+              <button
+                onClick={() => setFilterType('all')}
+                className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  filterType === 'all'
+                    ? 'bg-purple-600 text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                Tous
+              </button>
+              <button
+                onClick={() => setFilterType('popular')}
+                className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  filterType === 'popular'
+                    ? 'bg-purple-600 text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                Populaires
+              </button>
+              <button
+                onClick={() => setFilterType('recent')}
+                className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  filterType === 'recent'
+                    ? 'bg-purple-600 text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                Récents
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="p-6">
+          {filteredTags.length === 0 ? (
+            <div className="text-center py-12">
+              <TagIcon className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+              <h3 className="text-lg font-medium text-gray-900 mb-2">
+                Aucun tag trouvé
+              </h3>
+              <p className="text-gray-500 mb-4">
+                {searchTerm ? 'Essayez de modifier votre recherche' : 'Commencez par créer votre premier tag'}
+              </p>
+              {!searchTerm && (
+                <button
+                  onClick={() => setShowCreateModal(true)}
+                  className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg inline-flex items-center gap-2"
+                >
+                  <Plus className="w-4 h-4" />
+                  Créer un tag
+                </button>
+              )}
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {filteredTags.map((tag: Tag) => (
+                <div
+                  key={tag.name}
+                  className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                >
+                  <div className="flex items-start justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      <div
+                        className="w-3 h-3 rounded-full"
+                        style={{ backgroundColor: tag.color || '#8B5CF6' }}
+                      />
+                      <h3 className="font-medium text-gray-900">{tag.name}</h3>
+                    </div>
+                    <div className="flex gap-1">
+                      <button
+                        onClick={() => handleViewTasks(tag)}
+                        className="p-1 text-gray-400 hover:text-blue-600 transition-colors"
+                        title="Voir les tâches"
+                      >
+                        <Eye className="w-4 h-4" />
+                      </button>
+                      <button
+                        onClick={() => handleEditTag(tag)}
+                        className="p-1 text-gray-400 hover:text-green-600 transition-colors"
+                        title="Modifier"
+                      >
+                        <Edit className="w-4 h-4" />
+                      </button>
+                      <button
+                        onClick={() => handleDeleteTag(tag)}
+                        className="p-1 text-gray-400 hover:text-red-600 transition-colors"
+                        title="Supprimer"
+                      >
+                        <Trash2 className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-500">Utilisations:</span>
+                      <span className="font-medium">{tag.usage_count}</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-500">Tâches:</span>
+                      <span className="font-medium">{tag.tasks_count}</span>
+                    </div>
+                    {tag.last_used && (
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-500">Dernière utilisation:</span>
+                        <span className="font-medium">
+                          {new Date(tag.last_used).toLocaleDateString('fr-FR')}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Barre de progression pour la popularité */}
+                  <div className="mt-3">
+                    <div className="flex justify-between text-xs text-gray-500 mb-1">
+                      <span>Popularité</span>
+                      <span>{tag.usage_count} utilisations</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div
+                        className="bg-purple-600 h-2 rounded-full"
+                        style={{
+                          width: `${Math.min((tag.usage_count / (tagStats?.max_usage || 1)) * 100, 100)}%`
+                        }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Modals (à implémenter) */}
+      {showCreateModal && (
+        <CreateTagModal
+          onClose={() => setShowCreateModal(false)}
+          onSuccess={() => {
+            setShowCreateModal(false);
+            refetchTags();
+          }}
+        />
+      )}
+
+      {showEditModal && selectedTag && (
+        <EditTagModal
+          tag={selectedTag}
+          onClose={() => {
+            setShowEditModal(false);
+            setSelectedTag(null);
+          }}
+          onSuccess={() => {
+            setShowEditModal(false);
+            setSelectedTag(null);
+            refetchTags();
+          }}
+        />
+      )}
+
+      {showTasksModal && selectedTag && (
+        <TagTasksModal
+          tag={selectedTag}
+          onClose={() => {
+            setShowTasksModal(false);
+            setSelectedTag(null);
+          }}
+        />
+      )}
+    </div>
+  );
+};
+
+// Composants de modal (simplifiés pour l'exemple)
+const CreateTagModal: React.FC<{ onClose: () => void; onSuccess: () => void }> = ({ onClose, onSuccess }) => {
+  const [tagName, setTagName] = useState('');
+  const [tagColor, setTagColor] = useState('#8B5CF6');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // TODO: Implémenter la création
+    console.log('Création du tag:', { name: tagName, color: tagColor });
+    onSuccess();
+  };
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div className="bg-white rounded-lg p-6 w-full max-w-md">
+        <h3 className="text-lg font-semibold mb-4">Créer un nouveau tag</h3>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-2">Nom du tag</label>
+            <input
+              type="text"
+              value={tagName}
+              onChange={(e) => setTagName(e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-2">Couleur</label>
+            <input
+              type="color"
+              value={tagColor}
+              onChange={(e) => setTagColor(e.target.value)}
+              className="w-full h-10 border border-gray-300 rounded-lg"
+            />
+          </div>
+          <div className="flex gap-3">
+            <button
+              type="button"
+              onClick={onClose}
+              className="flex-1 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50"
+            >
+              Annuler
+            </button>
+            <button
+              type="submit"
+              className="flex-1 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700"
+            >
+              Créer
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+const EditTagModal: React.FC<{
+  tag: Tag;
+  onClose: () => void;
+  onSuccess: () => void;
+}> = ({ tag, onClose, onSuccess }) => {
+  const [tagName, setTagName] = useState(tag.name);
+  const [tagColor, setTagColor] = useState(tag.color || '#8B5CF6');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // TODO: Implémenter la modification
+    console.log('Modification du tag:', { oldName: tag.name, newName: tagName, color: tagColor });
+    onSuccess();
+  };
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div className="bg-white rounded-lg p-6 w-full max-w-md">
+        <h3 className="text-lg font-semibold mb-4">Modifier le tag</h3>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-2">Nom du tag</label>
+            <input
+              type="text"
+              value={tagName}
+              onChange={(e) => setTagName(e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-2">Couleur</label>
+            <input
+              type="color"
+              value={tagColor}
+              onChange={(e) => setTagColor(e.target.value)}
+              className="w-full h-10 border border-gray-300 rounded-lg"
+            />
+          </div>
+          <div className="flex gap-3">
+            <button
+              type="button"
+              onClick={onClose}
+              className="flex-1 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50"
+            >
+              Annuler
+            </button>
+            <button
+              type="submit"
+              className="flex-1 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700"
+            >
+              Modifier
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+interface Task {
+  id: string;
+  description: string;
+  responsable: string;
+  statut: string;
+}
+
+const TagTasksModal: React.FC<{
+  tag: Tag;
+  onClose: () => void;
+}> = ({ tag, onClose }) => {
+  // TODO: Implémenter la récupération des tâches pour ce tag
+  const tasks: Task[] = [];
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div className="bg-white rounded-lg w-full max-w-4xl max-h-[80vh] overflow-hidden">
+        <div className="p-6 border-b">
+          <div className="flex justify-between items-center">
+            <h3 className="text-lg font-semibold">
+              Tâches avec le tag "{tag.name}"
+            </h3>
+            <button
+              onClick={onClose}
+              className="text-gray-400 hover:text-gray-600"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <div className="p-6 overflow-auto max-h-96">
+          {tasks.length === 0 ? (
+            <p className="text-gray-500 text-center py-8">
+              Aucune tâche trouvée avec ce tag
+            </p>
+          ) : (
+            <div className="space-y-4">
+              {tasks.map((task: Task) => (
+                <div key={task.id} className="border rounded-lg p-4">
+                  <h4 className="font-medium">{task.description}</h4>
+                  <p className="text-sm text-gray-600">
+                    Responsable: {task.responsable} • Statut: {task.statut}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TagsPage;

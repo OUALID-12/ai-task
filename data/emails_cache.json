@@ -1,0 +1,130 @@
+{
+    "emails_hashes": {
+        "d7afebaea5e9d632": {
+            "processed_at": "2025-08-07T12:15:14",
+            "email_objet": "Réunion projet",
+            "email_expediteur": "manager@test.com",
+            "email_destinataire": "equipe@test.com",
+            "nb_taches_extraites": 2,
+            "type_email": "explicite",
+            "hash": "d7afebaea5e9d632"
+        },
+        "680e857963b74253": {
+            "processed_at": "2025-08-07T12:19:50",
+            "email_objet": "Demande slides présentation",
+            "email_expediteur": "client@company.com",
+            "email_destinataire": "equipe@test.com",
+            "nb_taches_extraites": 1,
+            "type_email": "explicite",
+            "hash": "680e857963b74253"
+        },
+        "3667a4b7f6d3c226": {
+            "processed_at": "2025-08-08T10:33:59",
+            "email_objet": "🧪 TEST TRAITEMENT AUTOMATIQUE - Urgent",
+            "email_expediteur": "chef.projet@entreprise.com",
+            "email_destinataire": "equipe.dev@entreprise.com",
+            "nb_taches_extraites": 3,
+            "type_email": "explicite",
+            "hash": "3667a4b7f6d3c226"
+        },
+        "cf9d5086ef0852fc": {
+            "processed_at": "2025-08-08T10:41:43",
+            "email_objet": "✅ TEST SURVEILLANCE CORRIGÉE - Nouvelle architecture",
+            "email_expediteur": "admin.systeme@entreprise.com",
+            "email_destinataire": "dev.team@entreprise.com",
+            "nb_taches_extraites": 3,
+            "type_email": "explicite",
+            "hash": "cf9d5086ef0852fc"
+        },
+        "9311da0605325b23": {
+            "processed_at": "2025-08-08T11:29:46",
+            "email_objet": "",
+            "email_expediteur": "",
+            "email_destinataire": "",
+            "nb_taches_extraites": 4,
+            "type_email": "",
+            "hash": "9311da0605325b23"
+        },
+        "b39c432568469ea7": {
+            "processed_at": "2025-08-08T11:29:48",
+            "email_objet": "",
+            "email_expediteur": "",
+            "email_destinataire": "",
+            "nb_taches_extraites": 3,
+            "type_email": "",
+            "hash": "b39c432568469ea7"
+        },
+        "9c3be2816669e03e": {
+            "processed_at": "2025-08-08T11:37:02",
+            "email_objet": "",
+            "email_expediteur": "",
+            "email_destinataire": "",
+            "nb_taches_extraites": 3,
+            "type_email": "",
+            "hash": "9c3be2816669e03e"
+        },
+        "e704949d322c3cb4": {
+            "processed_at": "2025-08-08T11:37:37",
+            "email_objet": "🚀 TEST FINAL - Surveillance Emails en Temps Réel",
+            "email_expediteur": "test.manager@entreprise.com",
+            "email_destinataire": "all@entreprise.com",
+            "nb_taches_extraites": 3,
+            "type_email": "explicite",
+            "hash": "e704949d322c3cb4"
+        },
+        "2d1db3634339b44d": {
+            "processed_at": "2025-08-08T11:43:58",
+            "email_objet": "🧪 TEST COMPLET - Validation Système Email + Meeting",
+            "email_expediteur": "admin@entreprise.com",
+            "email_destinataire": "equipe-dev@entreprise.com",
+            "nb_taches_extraites": 3,
+            "type_email": "explicite",
+            "hash": "2d1db3634339b44d"
+        },
+        "eb2e6ecbaee0b23f": {
+            "processed_at": "2025-08-08T11:44:16",
+            "email_objet": "",
+            "email_expediteur": "",
+            "email_destinataire": "",
+            "nb_taches_extraites": 4,
+            "type_email": "",
+            "hash": "eb2e6ecbaee0b23f"
+        },
+        "cc656dff3d778482": {
+            "processed_at": "2025-08-11T16:59:57",
+            "email_objet": "🔄 TEST SYSTÈME UNIFIÉ - Nouvelles tâches",
+            "email_expediteur": "chef-projet@entreprise.com",
+            "email_destinataire": "equipe-dev@entreprise.com",
+            "nb_taches_extraites": 3,
+            "type_email": "explicite",
+            "hash": "cc656dff3d778482"
+        },
+        "8afe4a571978f005": {
+            "processed_at": "2025-08-11T17:02:43",
+            "email_objet": "",
+            "email_expediteur": "",
+            "email_destinataire": "",
+            "nb_taches_extraites": 4,
+            "type_email": "",
+            "hash": "8afe4a571978f005"
+        },
+        "5901c90b1bb7ad05": {
+            "processed_at": "2025-08-22T11:39:04",
+            "email_objet": "",
+            "email_expediteur": "",
+            "email_destinataire": "",
+            "nb_taches_extraites": 1,
+            "type_email": "",
+            "hash": "5901c90b1bb7ad05"
+        },
+        "df5ca116d96e8edb": {
+            "processed_at": "2025-09-13T02:07:22",
+            "email_objet": "",
+            "email_expediteur": "",
+            "email_destinataire": "",
+            "nb_taches_extraites": 3,
+            "type_email": "",
+            "hash": "df5ca116d96e8edb"
+        }
+    }
+}

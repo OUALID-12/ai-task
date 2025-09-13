@@ -1,0 +1,297 @@
+[
+    {
+        "id": "meeting_001_planning_sprint",
+        "titre": "Planning Sprint Développement Q4",
+        "date_reunion": "2025-08-08",
+        "heure_debut": "09:00",
+        "heure_fin": "10:30",
+        "duree_minutes": 90,
+        "lieu": "Salle de conférence A / Teams",
+        "organisateur": {
+            "nom": "Marie Dubois",
+            "email": "marie.dubois@entreprise.com",
+            "role": "Chef de projet"
+        },
+        "participants": [
+            {
+                "nom": "Paul Martin",
+                "email": "paul.martin@entreprise.com",
+                "role": "Développeur Senior",
+                "present": true
+            },
+            {
+                "nom": "Sophie Laurent",
+                "email": "sophie.laurent@entreprise.com",
+                "role": "Product Owner",
+                "present": true
+            },
+            {
+                "nom": "Ahmed Benali",
+                "email": "ahmed.benali@entreprise.com",
+                "role": "Testeur",
+                "present": false,
+                "excuse": "En congé"
+            }
+        ],
+        "ordre_du_jour": [
+            "Revue du sprint précédent",
+            "Planification nouvelles fonctionnalités",
+            "Répartition des tâches",
+            "Dates de livraison"
+        ],
+        "transcription": "Marie: Bonjour à tous, commençons par la revue du sprint. Paul, peux-tu nous présenter l'état d'avancement ? Paul: Oui, j'ai terminé l'API utilisateurs mais il reste à corriger quelques bugs critiques avant vendredi. Sophie: Parfait, et pour la nouvelle interface ? Marie: Sophie, tu peux t'en occuper ? Sophie: Oui, je m'en charge, je prévois de finir d'ici mardi prochain. Paul: Il faudrait aussi organiser une réunion avec l'équipe de test pour valider les corrections. Ahmed n'est pas là aujourd'hui mais on peut planifier ça pour jeudi. Marie: Excellente idée. Sophie, tu peux organiser cette réunion de validation ? Sophie: Pas de problème, je m'occupe de programmer ça. Marie: Dernière chose, il faut absolument que le déploiement soit fait avant la fin du mois pour respecter la roadmap client.",
+        "departement": "IT",
+        "projet_associe": "Plateforme E-commerce",
+        "priorite_meeting": "élevée",
+        "type_reunion": "planification",
+        "statut_traitement": "traité",
+        "date_ajout": "2025-08-08T09:00:00",
+        "tags": [
+            "sprint",
+            "développement",
+            "planification",
+            "bugs"
+        ],
+        "decisions_prises": [],
+        "actions_identifiees": [
+            "Corriger les bugs critiques dans l'API utilisateurs",
+            "Finaliser la nouvelle interface",
+            "Organiser une réunion de validation avec l'équipe de test",
+            "Effectuer le déploiement avant la fin du mois"
+        ],
+        "nb_taches_extraites": 4,
+        "hash_transcription": "9311da0605325b23",
+        "fichiers_associes": [],
+        "resume_reunion": "",
+        "points_importants": [],
+        "prochaines_etapes": []
+    },
+    {
+        "id": "meeting_002_retrospective",
+        "titre": "Rétrospective Projet Alpha",
+        "date_reunion": "2025-08-07",
+        "heure_debut": "14:00",
+        "heure_fin": "15:30",
+        "duree_minutes": 90,
+        "lieu": "Salle créativité",
+        "organisateur": {
+            "nom": "Thomas Lefebvre",
+            "email": "thomas.lefebvre@entreprise.com",
+            "role": "Scrum Master"
+        },
+        "participants": [
+            {
+                "nom": "Laura Petit",
+                "email": "laura.petit@entreprise.com",
+                "role": "Développeuse Frontend",
+                "present": true
+            },
+            {
+                "nom": "Karim Hassani",
+                "email": "karim.hassani@entreprise.com",
+                "role": "Développeur Backend",
+                "present": true
+            },
+            {
+                "nom": "Nadia Moreau",
+                "email": "nadia.moreau@entreprise.com",
+                "role": "Designer UX",
+                "present": true
+            }
+        ],
+        "ordre_du_jour": [
+            "Ce qui a bien fonctionné",
+            "Ce qui peut être amélioré",
+            "Actions d'amélioration",
+            "Objectifs pour le prochain sprint"
+        ],
+        "transcription": "Thomas: Commençons par ce qui a bien fonctionné. Laura: La communication dans l'équipe était excellente, les daily meetings ont vraiment aidé. Karim: Je suis d'accord, et le code review process était efficace. Nadia: Le prototype UX a été validé rapidement par le client. Thomas: Parfait. Maintenant, qu'est-ce qui peut être amélioré ? Laura: Il faudrait automatiser les tests d'intégration, j'ai passé trop de temps sur les tests manuels. Karim: Oui, et on devrait mettre en place un environnement de staging plus stable. Nadia: Il faudrait aussi prévoir plus de temps pour les itérations design. Thomas: Excellent. Alors Laura, tu peux t'occuper de rechercher des solutions d'automatisation de tests ? Laura: Oui, je vais faire un benchmark des outils disponibles et présenter mes recommandations vendredi. Karim: Moi je peux m'occuper de l'environnement de staging, je prévois d'avoir quelque chose de fonctionnel la semaine prochaine. Thomas: Super. Et Nadia, pour les itérations design ? Nadia: Je vais proposer un nouveau workflow avec des créneaux dédiés, je présente ça lundi prochain.",
+        "departement": "IT",
+        "projet_associe": "Projet Alpha",
+        "priorite_meeting": "normale",
+        "type_reunion": "retrospective",
+        "statut_traitement": "traité",
+        "date_ajout": "2025-08-07T14:00:00",
+        "tags": [
+            "retrospective",
+            "amélioration",
+            "process"
+        ],
+        "decisions_prises": [],
+        "actions_identifiees": [
+            "Rechercher des solutions d'automatisation de tests",
+            "Mettre en place un environnement de staging plus stable",
+            "Proposer un nouveau workflow avec des créneaux dédiés pour les itérations design"
+        ],
+        "nb_taches_extraites": 3,
+        "hash_transcription": "b39c432568469ea7",
+        "fichiers_associes": [],
+        "resume_reunion": "",
+        "points_importants": [],
+        "prochaines_etapes": []
+    },
+    {
+        "id": "meeting_003_test_surveillance",
+        "titre": "TEST - Surveillance Temps Réel",
+        "date_reunion": "2025-08-08",
+        "heure_debut": "14:00",
+        "heure_fin": "15:00",
+        "duree_minutes": 60,
+        "lieu": "Bureau virtuel",
+        "organisateur": {
+            "nom": "Test Manager",
+            "email": "test@entreprise.com",
+            "role": "Testeur"
+        },
+        "participants": [
+            {
+                "nom": "Alice Développeuse",
+                "email": "alice@entreprise.com",
+                "role": "Développeuse",
+                "present": true
+            },
+            {
+                "nom": "Bob Testeur",
+                "email": "bob@entreprise.com",
+                "role": "Testeur QA",
+                "present": true
+            }
+        ],
+        "type_reunion": "test",
+        "departement": "IT",
+        "projet_associe": "Test Surveillance",
+        "ordre_du_jour": [
+            "Vérifier la surveillance automatique",
+            "Tester l'extraction de tâches",
+            "Valider les notifications"
+        ],
+        "transcription": "Bonjour tout le monde, nous allons tester le système de surveillance. Alice, peux-tu créer un nouveau test unitaire pour la fonctionnalité de cache avant vendredi ? Bob, il faut que tu vérifies les logs d'erreur et que tu prépares un rapport pour lundi prochain. Je vais aussi demander à quelqu'un de documenter cette nouvelle fonctionnalité de surveillance pour mercredi.",
+        "date_ajout": "2025-08-08T11:37:00Z",
+        "statut_traitement": "traité",
+        "hash_transcription": "9c3be2816669e03e",
+        "nb_taches_extraites": 3,
+        "actions_identifiees": [
+            "Créer un nouveau test unitaire pour la fonctionnalité de cache",
+            "Vérifier les logs d'erreur et préparer un rapport",
+            "Documenter la nouvelle fonctionnalité de surveillance"
+        ]
+    },
+    {
+        "id": "meeting_004_test_systeme_complet",
+        "titre": "🧪 TEST COMPLET - Validation Système Email + Meeting",
+        "date_reunion": "2025-08-08",
+        "heure_debut": "15:30",
+        "heure_fin": "16:30",
+        "duree_minutes": 60,
+        "lieu": "Salle de test / Teams",
+        "organisateur": {
+            "nom": "Admin Système",
+            "email": "admin@entreprise.com",
+            "role": "Administrateur"
+        },
+        "participants": [
+            {
+                "nom": "Marco Performance",
+                "email": "marco@entreprise.com",
+                "role": "Testeur Performance",
+                "present": true
+            },
+            {
+                "nom": "Lisa Documentation",
+                "email": "lisa@entreprise.com",
+                "role": "Rédactrice Technique",
+                "present": true
+            },
+            {
+                "nom": "Thomas API",
+                "email": "thomas@entreprise.com",
+                "role": "Développeur API",
+                "present": true
+            }
+        ],
+        "type_reunion": "validation",
+        "departement": "IT",
+        "projet_associe": "Test Système Complet",
+        "ordre_du_jour": [
+            "Tests de performance complets",
+            "Documentation des nouvelles fonctionnalités",
+            "Validation de l'intégration OpenRouter",
+            "Formation équipe support"
+        ],
+        "transcription": "Bonjour à tous, nous sommes ici pour valider le système complet. Marco, tu dois absolument terminer tous les tests de performance avant vendredi 16h, c'est critique. Lisa, il faut que tu finalises la documentation utilisateur pour lundi prochain sans faute. Thomas, peux-tu vérifier que l'intégration OpenRouter fonctionne parfaitement et corriger les éventuels bugs d'ici mercredi ? Et n'oublions pas de planifier la formation pour l'équipe support la semaine prochaine. C'est un projet prioritaire !",
+        "date_ajout": "2025-08-08T11:45:00Z",
+        "statut_traitement": "traité",
+        "hash_transcription": "eb2e6ecbaee0b23f",
+        "nb_taches_extraites": 4,
+        "actions_identifiees": [
+            "Terminer tous les tests de performance",
+            "Finaliser la documentation utilisateur",
+            "Vérifier l'intégration OpenRouter et corriger les bugs",
+            "Planifier la formation pour l'équipe support"
+        ]
+    },
+    {
+        "id": "meeting_test_unified_2025",
+        "titre": "🔄 Test Système Unifié - Sprint Planning",
+        "date_reunion": "2025-08-11",
+        "heure_debut": "14:00",
+        "heure_fin": "15:30",
+        "duree_minutes": 90,
+        "lieu": "Salle Teams",
+        "organisateur": {
+            "nom": "Marie Dupont",
+            "email": "marie.dupont@entreprise.com",
+            "role": "Chef de projet"
+        },
+        "participants": [
+            {
+                "nom": "David Martin",
+                "email": "david.martin@entreprise.com",
+                "role": "Développeur Senior",
+                "present": true
+            },
+            {
+                "nom": "Emma Laurent",
+                "email": "emma.laurent@entreprise.com",
+                "role": "UX Designer",
+                "present": true
+            },
+            {
+                "nom": "Lucas Dubois",
+                "email": "lucas.dubois@entreprise.com",
+                "role": "Testeur QA",
+                "present": true
+            }
+        ],
+        "ordre_du_jour": [
+            "Revue des objectifs du sprint",
+            "Planification des tâches",
+            "Répartition des responsabilités",
+            "Points de blocage"
+        ],
+        "transcription": "Marie: Bonjour équipe, commençons par la revue des objectifs. David, peux-tu nous faire un point sur l'avancement ? David: J'ai terminé les APIs principales mais il reste à implémenter la gestion d'erreurs. Emma: Pour l'UX, j'ai finalisé les maquettes mais il faudrait valider avec le client. Lucas: Les tests automatisés sont en place, mais on a quelques instabilités à corriger. Marie: Parfait, alors David tu termines les erreurs, Emma tu organises la validation client, et Lucas tu stabilises les tests. On se revoit vendredi pour le point d'avancement.",
+        "departement": "IT",
+        "projet_associe": "Système Unifié",
+        "priorite_meeting": "élevée",
+        "type_reunion": "planification",
+        "statut_traitement": "traité",
+        "date_ajout": "2025-08-11T14:00:00",
+        "tags": [
+            "sprint",
+            "planification",
+            "unified_system"
+        ],
+        "fichiers_associes": [],
+        "decisions_prises": [],
+        "actions_identifiees": [
+            "Implémenter la gestion d'erreurs",
+            "Valider les maquettes avec le client",
+            "Stabiliser les tests automatisés"
+        ],
+        "nb_taches_extraites": 3,
+        "hash_transcription": "df5ca116d96e8edb",
+        "resume_reunion": "",
+        "points_importants": [],
+        "prochaines_etapes": []
+    }
+]

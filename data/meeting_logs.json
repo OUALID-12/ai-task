@@ -1,0 +1,194 @@
+[
+    {
+        "horodatage": "2025-08-08T11:26:45.084931",
+        "meeting_id": "meeting_001_planning_sprint",
+        "statut": "erreur",
+        "nb_taches": 0,
+        "erreur": "'dict' object has no attribute 'lower'",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-08T11:26:45.099448",
+        "meeting_id": "meeting_002_retrospective",
+        "statut": "erreur",
+        "nb_taches": 0,
+        "erreur": "'dict' object has no attribute 'lower'",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-08T11:26:45.140132",
+        "meeting_id": "meeting_001_planning_sprint",
+        "statut": "erreur",
+        "nb_taches": 0,
+        "erreur": "'dict' object has no attribute 'lower'",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-08T11:26:45.155027",
+        "meeting_id": "meeting_002_retrospective",
+        "statut": "erreur",
+        "nb_taches": 0,
+        "erreur": "'dict' object has no attribute 'lower'",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-08T11:28:12.739611",
+        "meeting_id": "meeting_001_planning_sprint",
+        "statut": "erreur",
+        "nb_taches": 0,
+        "erreur": "'dict' object has no attribute 'lower'",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-08T11:28:12.752711",
+        "meeting_id": "meeting_002_retrospective",
+        "statut": "erreur",
+        "nb_taches": 0,
+        "erreur": "'dict' object has no attribute 'lower'",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-08T11:28:12.789622",
+        "meeting_id": "meeting_001_planning_sprint",
+        "statut": "erreur",
+        "nb_taches": 0,
+        "erreur": "'dict' object has no attribute 'lower'",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-08T11:28:12.821468",
+        "meeting_id": "meeting_002_retrospective",
+        "statut": "erreur",
+        "nb_taches": 0,
+        "erreur": "'dict' object has no attribute 'lower'",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-08T11:28:45.770615",
+        "meeting_id": "meeting_001_planning_sprint",
+        "statut": "erreur",
+        "nb_taches": 0,
+        "erreur": "'str' object is not a mapping",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-08T11:28:47.298571",
+        "meeting_id": "meeting_002_retrospective",
+        "statut": "erreur",
+        "nb_taches": 0,
+        "erreur": "'str' object is not a mapping",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-08T11:28:49.228190",
+        "meeting_id": "meeting_001_planning_sprint",
+        "statut": "erreur",
+        "nb_taches": 0,
+        "erreur": "'str' object is not a mapping",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-08T11:28:50.774603",
+        "meeting_id": "meeting_002_retrospective",
+        "statut": "erreur",
+        "nb_taches": 0,
+        "erreur": "'str' object is not a mapping",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-08T11:28:52.498790",
+        "meeting_id": "meeting_001_planning_sprint",
+        "statut": "erreur",
+        "nb_taches": 0,
+        "erreur": "'str' object is not a mapping",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-08T11:28:54.039529",
+        "meeting_id": "meeting_002_retrospective",
+        "statut": "erreur",
+        "nb_taches": 0,
+        "erreur": "'str' object is not a mapping",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-08T11:29:46.127444",
+        "meeting_id": "meeting_001_planning_sprint",
+        "statut": "succès",
+        "nb_taches": 4,
+        "erreur": "",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-08T11:29:48.053949",
+        "meeting_id": "meeting_002_retrospective",
+        "statut": "succès",
+        "nb_taches": 3,
+        "erreur": "",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-08T11:37:02.559936",
+        "meeting_id": "meeting_003_test_surveillance",
+        "statut": "succès",
+        "nb_taches": 3,
+        "erreur": "",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-08T11:44:16.916175",
+        "meeting_id": "meeting_004_test_systeme_complet",
+        "statut": "succès",
+        "nb_taches": 4,
+        "erreur": "",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-11T17:00:17.782364",
+        "meeting_id": "meeting_test_unified_2025",
+        "statut": "erreur",
+        "nb_taches": 0,
+        "erreur": "'projet_associe'",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-11T17:02:08.503895",
+        "meeting_id": "meeting_test_unified_2025",
+        "statut": "erreur",
+        "nb_taches": 0,
+        "erreur": "'ordre_du_jour'",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-11T17:02:08.550200",
+        "meeting_id": "meeting_test_unified_2025",
+        "statut": "erreur",
+        "nb_taches": 0,
+        "erreur": "'ordre_du_jour'",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-11T17:02:27.328541",
+        "meeting_id": "meeting_test_unified_2025",
+        "statut": "erreur",
+        "nb_taches": 0,
+        "erreur": "'date_ajout'",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-08-11T17:02:43.726234",
+        "meeting_id": "meeting_test_unified_2025",
+        "statut": "succès",
+        "nb_taches": 4,
+        "erreur": "",
+        "type_traitement": "meeting_processing"
+    },
+    {
+        "horodatage": "2025-09-13T02:07:22.774511",
+        "meeting_id": "meeting_test_unified_2025",
+        "statut": "succès",
+        "nb_taches": 3,
+        "erreur": "",
+        "type_traitement": "meeting_processing"
+    }
+]

@@ -1,0 +1,177 @@
+[
+    {
+        "horodatage": "2025-08-06T12:38:54",
+        "email_objet": "Avancement projet Alpha",
+        "statut": "succès",
+        "type_detecte": "implicite",
+        "nb_taches": 2
+    },
+    {
+        "horodatage": "2025-08-06T12:38:58",
+        "email_objet": "Demande de suivi KPI",
+        "statut": "succès",
+        "type_detecte": "implicite",
+        "nb_taches": 2
+    },
+    {
+        "horodatage": "2025-08-06T12:39:02",
+        "email_objet": "Mise à jour politique RH",
+        "statut": "succès",
+        "type_detecte": "implicite",
+        "nb_taches": 2
+    },
+    {
+        "horodatage": "2025-08-06T12:39:06",
+        "email_objet": "Confirmation commande #45721",
+        "statut": "succès",
+        "type_detecte": "implicite",
+        "nb_taches": 2
+    },
+    {
+        "horodatage": "2025-08-06T12:39:12",
+        "email_objet": "URGENT: Préparation budget 2026",
+        "statut": "succès",
+        "type_detecte": "explicite",
+        "nb_taches": 2
+    },
+    {
+        "horodatage": "2025-08-06T12:39:15",
+        "email_objet": "Ticket #789 résolu",
+        "statut": "succès",
+        "type_detecte": "implicite",
+        "nb_taches": 1
+    },
+    {
+        "horodatage": "2025-08-06T12:39:19",
+        "email_objet": "Demande congés septembre",
+        "statut": "succès",
+        "type_detecte": "implicite",
+        "nb_taches": 1
+    },
+    {
+        "horodatage": "2025-08-06T12:39:25",
+        "email_objet": "Brief nouveau client",
+        "statut": "succès",
+        "type_detecte": "explicite",
+        "nb_taches": 2
+    },
+    {
+        "horodatage": "2025-08-06T16:16:02",
+        "email_objet": "Test surveillance automatique - 16:07:53",
+        "statut": "succès",
+        "type_detecte": "explicite",
+        "nb_taches": 2
+    },
+    {
+        "horodatage": "2025-08-06T16:16:06",
+        "email_objet": "Test surveillance automatique - 16:07:53",
+        "statut": "succès",
+        "type_detecte": "implicite",
+        "nb_taches": 1
+    },
+    {
+        "horodatage": "2025-08-06T16:26:05",
+        "email_objet": "NOUVEAU TEST - Surveillance temps réel",
+        "statut": "succès",
+        "type_detecte": "implicite",
+        "nb_taches": 3
+    },
+    {
+        "horodatage": "2025-08-06T16:26:12",
+        "email_objet": "TEST SURVEILLANCE AUTOMATIQUE",
+        "statut": "succès",
+        "type_detecte": "explicite",
+        "nb_taches": 3
+    },
+    {
+        "horodatage": "2025-08-06T16:49:41",
+        "email_objet": "URGENT : Documents fiscaux à fournir",
+        "statut": "succès",
+        "type_detecte": "explicite",
+        "nb_taches": 1
+    },
+    {
+        "horodatage": "2025-08-06T16:49:45",
+        "email_objet": "Retard livraison #45892",
+        "statut": "succès",
+        "type_detecte": "implicite",
+        "nb_taches": 1
+    },
+    {
+        "horodatage": "2025-08-06T16:49:51",
+        "email_objet": "Stratégie Q4 : Actions prioritaires",
+        "statut": "succès",
+        "type_detecte": "explicite",
+        "nb_taches": 3
+    },
+    {
+        "horodatage": "2025-08-07T09:37:24",
+        "email_objet": "string",
+        "statut": "succès",
+        "resultat_ia_brut": "[\n    {\n        \"description\": \"Lire attentivement l'email\",\n        \"responsable\": \"inconnu\",\n        \"priorite\": \"élevée\",\n        \"confiance_ia\": 0.8\n    },\n    {\n        \"description\": \"Déduire les tâches possibles de l'équipe en fonction du contexte de l'email\",\n        \"responsable\": \"inconnu\",\n        \"priorite\": \"élevée\",\n        \"confiance_ia\": 0.7\n    }\n]",
+        "taches_extraites": 2
+    },
+    {
+        "horodatage": "2025-08-07T12:19:45",
+        "email_objet": "Réunion projet",
+        "statut": "cache_hit",
+        "resultat_ia_brut": "Récupéré depuis cache"
+    },
+    {
+        "horodatage": "2025-08-07T12:19:50",
+        "email_objet": "Demande slides présentation",
+        "statut": "succès",
+        "resultat_ia_brut": "[\n    {\n        \"description\": \"envoyer les slides par email\",\n        \"responsable\": \"\",\n        \"deadline\": \"\",\n        \"priorite\": \"\"\n    }\n]",
+        "taches_extraites": 1
+    },
+    {
+        "horodatage": "2025-08-08T10:33:59",
+        "email_objet": "🧪 TEST TRAITEMENT AUTOMATIQUE - Urgent",
+        "statut": "succès",
+        "type_detecte": "explicite",
+        "nb_taches": 3,
+        "hash_email": "3667a4b7f6d3c226",
+        "cache_status": "nouveau_email_ajoute_au_cache",
+        "traitement_mode": "batch"
+    },
+    {
+        "horodatage": "2025-08-08T10:41:43",
+        "email_objet": "✅ TEST SURVEILLANCE CORRIGÉE - Nouvelle architecture",
+        "statut": "succès",
+        "type_detecte": "explicite",
+        "nb_taches": 3,
+        "hash_email": "cf9d5086ef0852fc",
+        "cache_status": "nouveau_email_ajoute_au_cache",
+        "traitement_mode": "batch"
+    },
+    {
+        "horodatage": "2025-08-08T11:37:37",
+        "email_objet": "🚀 TEST FINAL - Surveillance Emails en Temps Réel",
+        "statut": "succès",
+        "type_detecte": "explicite",
+        "nb_taches": 3,
+        "hash_email": "e704949d322c3cb4",
+        "cache_status": "nouveau_email_ajoute_au_cache",
+        "traitement_mode": "batch"
+    },
+    {
+        "horodatage": "2025-08-08T11:43:58",
+        "email_objet": "🧪 TEST COMPLET - Validation Système Email + Meeting",
+        "statut": "succès",
+        "type_detecte": "explicite",
+        "nb_taches": 3,
+        "hash_email": "2d1db3634339b44d",
+        "cache_status": "nouveau_email_ajoute_au_cache",
+        "traitement_mode": "batch"
+    },
+    {
+        "horodatage": "2025-08-11T16:59:57",
+        "email_objet": "🔄 TEST SYSTÈME UNIFIÉ - Nouvelles tâches",
+        "statut": "succès",
+        "type_detecte": "explicite",
+        "nb_taches": 3,
+        "hash_email": "cc656dff3d778482",
+        "cache_status": "nouveau_email_ajoute_au_cache",
+        "traitement_mode": "batch"
+    }
+]

@@ -1,0 +1,576 @@
+[
+    {
+        "description": "Corriger les bugs critiques dans l'API utilisateurs",
+        "responsable": "Paul Martin",
+        "deadline": "2025-08-06",
+        "priorite": "Haute",
+        "meeting_id": "meeting_001_planning_sprint",
+        "meeting_titre": "Planning Sprint Développement Q4",
+        "meeting_date": "2025-08-08",
+        "meeting_participants": [
+            "Paul Martin",
+            "Sophie Laurent"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "Planning Sprint Développement Q4",
+            "date": "2025-08-08",
+            "organisateur": "Marie Dubois",
+            "participants": [
+                "Paul Martin",
+                "Sophie Laurent"
+            ],
+            "departement": "IT",
+            "projet": "Plateforme E-commerce",
+            "type_reunion": "planification"
+        }
+    },
+    {
+        "description": "Finaliser la nouvelle interface",
+        "responsable": "Sophie Laurent",
+        "deadline": "2025-08-10",
+        "priorite": "Haute",
+        "meeting_id": "meeting_001_planning_sprint",
+        "meeting_titre": "Planning Sprint Développement Q4",
+        "meeting_date": "2025-08-08",
+        "meeting_participants": [
+            "Paul Martin",
+            "Sophie Laurent"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "Planning Sprint Développement Q4",
+            "date": "2025-08-08",
+            "organisateur": "Marie Dubois",
+            "participants": [
+                "Paul Martin",
+                "Sophie Laurent"
+            ],
+            "departement": "IT",
+            "projet": "Plateforme E-commerce",
+            "type_reunion": "planification"
+        }
+    },
+    {
+        "description": "Organiser une réunion de validation avec l'équipe de test",
+        "responsable": "Sophie Laurent",
+        "deadline": "2025-08-13",
+        "priorite": "Moyenne",
+        "meeting_id": "meeting_001_planning_sprint",
+        "meeting_titre": "Planning Sprint Développement Q4",
+        "meeting_date": "2025-08-08",
+        "meeting_participants": [
+            "Paul Martin",
+            "Sophie Laurent"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "Planning Sprint Développement Q4",
+            "date": "2025-08-08",
+            "organisateur": "Marie Dubois",
+            "participants": [
+                "Paul Martin",
+                "Sophie Laurent"
+            ],
+            "departement": "IT",
+            "projet": "Plateforme E-commerce",
+            "type_reunion": "planification"
+        }
+    },
+    {
+        "description": "Effectuer le déploiement avant la fin du mois",
+        "responsable": "Non spécifié",
+        "deadline": "2025-08-31",
+        "priorite": "Haute",
+        "meeting_id": "meeting_001_planning_sprint",
+        "meeting_titre": "Planning Sprint Développement Q4",
+        "meeting_date": "2025-08-08",
+        "meeting_participants": [
+            "Paul Martin",
+            "Sophie Laurent"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "Planning Sprint Développement Q4",
+            "date": "2025-08-08",
+            "organisateur": "Marie Dubois",
+            "participants": [
+                "Paul Martin",
+                "Sophie Laurent"
+            ],
+            "departement": "IT",
+            "projet": "Plateforme E-commerce",
+            "type_reunion": "planification"
+        }
+    },
+    {
+        "description": "Rechercher des solutions d'automatisation de tests",
+        "responsable": "Laura Petit",
+        "deadline": "2025-08-13",
+        "priorite": "Haute",
+        "meeting_id": "meeting_002_retrospective",
+        "meeting_titre": "Rétrospective Projet Alpha",
+        "meeting_date": "2025-08-07",
+        "meeting_participants": [
+            "Laura Petit",
+            "Karim Hassani",
+            "Nadia Moreau"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "Rétrospective Projet Alpha",
+            "date": "2025-08-07",
+            "organisateur": "Thomas Lefebvre",
+            "participants": [
+                "Laura Petit",
+                "Karim Hassani",
+                "Nadia Moreau"
+            ],
+            "departement": "IT",
+            "projet": "Projet Alpha",
+            "type_reunion": "retrospective"
+        }
+    },
+    {
+        "description": "Mettre en place un environnement de staging plus stable",
+        "responsable": "Karim Hassani",
+        "deadline": "2025-08-10",
+        "priorite": "Haute",
+        "meeting_id": "meeting_002_retrospective",
+        "meeting_titre": "Rétrospective Projet Alpha",
+        "meeting_date": "2025-08-07",
+        "meeting_participants": [
+            "Laura Petit",
+            "Karim Hassani",
+            "Nadia Moreau"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "Rétrospective Projet Alpha",
+            "date": "2025-08-07",
+            "organisateur": "Thomas Lefebvre",
+            "participants": [
+                "Laura Petit",
+                "Karim Hassani",
+                "Nadia Moreau"
+            ],
+            "departement": "IT",
+            "projet": "Projet Alpha",
+            "type_reunion": "retrospective"
+        }
+    },
+    {
+        "description": "Proposer un nouveau workflow avec des créneaux dédiés pour les itérations design",
+        "responsable": "Nadia Moreau",
+        "deadline": "2025-08-10",
+        "priorite": "Moyenne",
+        "meeting_id": "meeting_002_retrospective",
+        "meeting_titre": "Rétrospective Projet Alpha",
+        "meeting_date": "2025-08-07",
+        "meeting_participants": [
+            "Laura Petit",
+            "Karim Hassani",
+            "Nadia Moreau"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "Rétrospective Projet Alpha",
+            "date": "2025-08-07",
+            "organisateur": "Thomas Lefebvre",
+            "participants": [
+                "Laura Petit",
+                "Karim Hassani",
+                "Nadia Moreau"
+            ],
+            "departement": "IT",
+            "projet": "Projet Alpha",
+            "type_reunion": "retrospective"
+        }
+    },
+    {
+        "description": "Créer un nouveau test unitaire pour la fonctionnalité de cache",
+        "responsable": "Alice Développeuse",
+        "deadline": "2025-08-06",
+        "priorite": "haute",
+        "meeting_id": "meeting_003_test_surveillance",
+        "meeting_titre": "TEST - Surveillance Temps Réel",
+        "meeting_date": "2025-08-08",
+        "meeting_participants": [
+            "Alice Développeuse",
+            "Bob Testeur"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "TEST - Surveillance Temps Réel",
+            "date": "2025-08-08",
+            "organisateur": "Test Manager",
+            "participants": [
+                "Alice Développeuse",
+                "Bob Testeur"
+            ],
+            "departement": "IT",
+            "projet": "Test Surveillance",
+            "type_reunion": "test"
+        }
+    },
+    {
+        "description": "Vérifier les logs d'erreur et préparer un rapport",
+        "responsable": "Bob Testeur",
+        "deadline": "2025-08-10",
+        "priorite": "moyenne",
+        "meeting_id": "meeting_003_test_surveillance",
+        "meeting_titre": "TEST - Surveillance Temps Réel",
+        "meeting_date": "2025-08-08",
+        "meeting_participants": [
+            "Alice Développeuse",
+            "Bob Testeur"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "TEST - Surveillance Temps Réel",
+            "date": "2025-08-08",
+            "organisateur": "Test Manager",
+            "participants": [
+                "Alice Développeuse",
+                "Bob Testeur"
+            ],
+            "departement": "IT",
+            "projet": "Test Surveillance",
+            "type_reunion": "test"
+        }
+    },
+    {
+        "description": "Documenter la nouvelle fonctionnalité de surveillance",
+        "responsable": "À définir",
+        "deadline": "2025-08-07",
+        "priorite": "moyenne",
+        "meeting_id": "meeting_003_test_surveillance",
+        "meeting_titre": "TEST - Surveillance Temps Réel",
+        "meeting_date": "2025-08-08",
+        "meeting_participants": [
+            "Alice Développeuse",
+            "Bob Testeur"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "TEST - Surveillance Temps Réel",
+            "date": "2025-08-08",
+            "organisateur": "Test Manager",
+            "participants": [
+                "Alice Développeuse",
+                "Bob Testeur"
+            ],
+            "departement": "IT",
+            "projet": "Test Surveillance",
+            "type_reunion": "test"
+        }
+    },
+    {
+        "description": "Terminer tous les tests de performance",
+        "responsable": "Marco Performance",
+        "deadline": "2025-08-06",
+        "priorite": "critique",
+        "meeting_id": "meeting_004_test_systeme_complet",
+        "meeting_titre": "🧪 TEST COMPLET - Validation Système Email + Meeting",
+        "meeting_date": "2025-08-08",
+        "meeting_participants": [
+            "Marco Performance",
+            "Lisa Documentation",
+            "Thomas API"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "🧪 TEST COMPLET - Validation Système Email + Meeting",
+            "date": "2025-08-08",
+            "organisateur": "Admin Système",
+            "participants": [
+                "Marco Performance",
+                "Lisa Documentation",
+                "Thomas API"
+            ],
+            "departement": "IT",
+            "projet": "Test Système Complet",
+            "type_reunion": "validation"
+        }
+    },
+    {
+        "description": "Finaliser la documentation utilisateur",
+        "responsable": "Lisa Documentation",
+        "deadline": "2025-08-09",
+        "priorite": "normal",
+        "meeting_id": "meeting_004_test_systeme_complet",
+        "meeting_titre": "🧪 TEST COMPLET - Validation Système Email + Meeting",
+        "meeting_date": "2025-08-08",
+        "meeting_participants": [
+            "Marco Performance",
+            "Lisa Documentation",
+            "Thomas API"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "🧪 TEST COMPLET - Validation Système Email + Meeting",
+            "date": "2025-08-08",
+            "organisateur": "Admin Système",
+            "participants": [
+                "Marco Performance",
+                "Lisa Documentation",
+                "Thomas API"
+            ],
+            "departement": "IT",
+            "projet": "Test Système Complet",
+            "type_reunion": "validation"
+        }
+    },
+    {
+        "description": "Vérifier l'intégration OpenRouter et corriger les bugs",
+        "responsable": "Thomas API",
+        "deadline": "2025-08-04",
+        "priorite": "normal",
+        "meeting_id": "meeting_004_test_systeme_complet",
+        "meeting_titre": "🧪 TEST COMPLET - Validation Système Email + Meeting",
+        "meeting_date": "2025-08-08",
+        "meeting_participants": [
+            "Marco Performance",
+            "Lisa Documentation",
+            "Thomas API"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "🧪 TEST COMPLET - Validation Système Email + Meeting",
+            "date": "2025-08-08",
+            "organisateur": "Admin Système",
+            "participants": [
+                "Marco Performance",
+                "Lisa Documentation",
+                "Thomas API"
+            ],
+            "departement": "IT",
+            "projet": "Test Système Complet",
+            "type_reunion": "validation"
+        }
+    },
+    {
+        "description": "Planifier la formation pour l'équipe support",
+        "responsable": "Admin Système",
+        "deadline": "2025-08-11",
+        "priorite": "prioritaire",
+        "meeting_id": "meeting_004_test_systeme_complet",
+        "meeting_titre": "🧪 TEST COMPLET - Validation Système Email + Meeting",
+        "meeting_date": "2025-08-08",
+        "meeting_participants": [
+            "Marco Performance",
+            "Lisa Documentation",
+            "Thomas API"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "🧪 TEST COMPLET - Validation Système Email + Meeting",
+            "date": "2025-08-08",
+            "organisateur": "Admin Système",
+            "participants": [
+                "Marco Performance",
+                "Lisa Documentation",
+                "Thomas API"
+            ],
+            "departement": "IT",
+            "projet": "Test Système Complet",
+            "type_reunion": "validation"
+        }
+    },
+    {
+        "description": "Optimisation des performances de l'API",
+        "responsable": "David Martin",
+        "deadline": "2025-08-13",
+        "priorite": "Haute",
+        "meeting_id": "meeting_test_unified_2025",
+        "meeting_titre": "🔄 Test Système Unifié - Sprint Planning",
+        "meeting_date": "2025-08-11",
+        "meeting_participants": [
+            "David Martin",
+            "Emma Laurent",
+            "Lucas Dubois"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "🔄 Test Système Unifié - Sprint Planning",
+            "date": "2025-08-11",
+            "organisateur": "Marie Dupont",
+            "participants": [
+                "David Martin",
+                "Emma Laurent",
+                "Lucas Dubois"
+            ],
+            "departement": "IT",
+            "projet": "Système Unifié v2.0",
+            "type_reunion": "planification"
+        }
+    },
+    {
+        "description": "Finalisation des maquettes de l'interface utilisateur",
+        "responsable": "Emma Laurent",
+        "deadline": "2025-08-11",
+        "priorite": "Moyenne",
+        "meeting_id": "meeting_test_unified_2025",
+        "meeting_titre": "🔄 Test Système Unifié - Sprint Planning",
+        "meeting_date": "2025-08-11",
+        "meeting_participants": [
+            "David Martin",
+            "Emma Laurent",
+            "Lucas Dubois"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "🔄 Test Système Unifié - Sprint Planning",
+            "date": "2025-08-11",
+            "organisateur": "Marie Dupont",
+            "participants": [
+                "David Martin",
+                "Emma Laurent",
+                "Lucas Dubois"
+            ],
+            "departement": "IT",
+            "projet": "Système Unifié v2.0",
+            "type_reunion": "planification"
+        }
+    },
+    {
+        "description": "Mise en place du pipeline CI/CD automatisé pour l'environnement de staging",
+        "responsable": "Lucas Dubois",
+        "deadline": "2025-08-11",
+        "priorite": "Haute",
+        "meeting_id": "meeting_test_unified_2025",
+        "meeting_titre": "🔄 Test Système Unifié - Sprint Planning",
+        "meeting_date": "2025-08-11",
+        "meeting_participants": [
+            "David Martin",
+            "Emma Laurent",
+            "Lucas Dubois"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "🔄 Test Système Unifié - Sprint Planning",
+            "date": "2025-08-11",
+            "organisateur": "Marie Dupont",
+            "participants": [
+                "David Martin",
+                "Emma Laurent",
+                "Lucas Dubois"
+            ],
+            "departement": "IT",
+            "projet": "Système Unifié v2.0",
+            "type_reunion": "planification"
+        }
+    },
+    {
+        "description": "Organisation de la réunion de validation avec le client",
+        "responsable": "A définir",
+        "deadline": "A définir",
+        "priorite": "Moyenne",
+        "meeting_id": "meeting_test_unified_2025",
+        "meeting_titre": "🔄 Test Système Unifié - Sprint Planning",
+        "meeting_date": "2025-08-11",
+        "meeting_participants": [
+            "David Martin",
+            "Emma Laurent",
+            "Lucas Dubois"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "🔄 Test Système Unifié - Sprint Planning",
+            "date": "2025-08-11",
+            "organisateur": "Marie Dupont",
+            "participants": [
+                "David Martin",
+                "Emma Laurent",
+                "Lucas Dubois"
+            ],
+            "departement": "IT",
+            "projet": "Système Unifié v2.0",
+            "type_reunion": "planification"
+        }
+    },
+    {
+        "description": "Implémenter la gestion d'erreurs",
+        "responsable": "David Martin",
+        "deadline": "2025-08-11",
+        "priorite": "moyenne",
+        "meeting_id": "meeting_test_unified_2025",
+        "meeting_titre": "🔄 Test Système Unifié - Sprint Planning",
+        "meeting_date": "2025-08-11",
+        "meeting_participants": [
+            "David Martin",
+            "Emma Laurent",
+            "Lucas Dubois"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "🔄 Test Système Unifié - Sprint Planning",
+            "date": "2025-08-11",
+            "organisateur": "Marie Dupont",
+            "participants": [
+                "David Martin",
+                "Emma Laurent",
+                "Lucas Dubois"
+            ],
+            "departement": "IT",
+            "projet": "Système Unifié",
+            "type_reunion": "planification"
+        }
+    },
+    {
+        "description": "Valider les maquettes avec le client",
+        "responsable": "Emma Laurent",
+        "deadline": "2025-08-11",
+        "priorite": "haute",
+        "meeting_id": "meeting_test_unified_2025",
+        "meeting_titre": "🔄 Test Système Unifié - Sprint Planning",
+        "meeting_date": "2025-08-11",
+        "meeting_participants": [
+            "David Martin",
+            "Emma Laurent",
+            "Lucas Dubois"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "🔄 Test Système Unifié - Sprint Planning",
+            "date": "2025-08-11",
+            "organisateur": "Marie Dupont",
+            "participants": [
+                "David Martin",
+                "Emma Laurent",
+                "Lucas Dubois"
+            ],
+            "departement": "IT",
+            "projet": "Système Unifié",
+            "type_reunion": "planification"
+        }
+    },
+    {
+        "description": "Stabiliser les tests automatisés",
+        "responsable": "Lucas Dubois",
+        "deadline": "2025-08-11",
+        "priorite": "haute",
+        "meeting_id": "meeting_test_unified_2025",
+        "meeting_titre": "🔄 Test Système Unifié - Sprint Planning",
+        "meeting_date": "2025-08-11",
+        "meeting_participants": [
+            "David Martin",
+            "Emma Laurent",
+            "Lucas Dubois"
+        ],
+        "source": "meeting",
+        "origine_meeting": {
+            "titre": "🔄 Test Système Unifié - Sprint Planning",
+            "date": "2025-08-11",
+            "organisateur": "Marie Dupont",
+            "participants": [
+                "David Martin",
+                "Emma Laurent",
+                "Lucas Dubois"
+            ],
+            "departement": "IT",
+            "projet": "Système Unifié",
+            "type_reunion": "planification"
+        }
+    }
+]

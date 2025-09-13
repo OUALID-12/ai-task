@@ -1,0 +1,27 @@
+3.	Déploiement et mise en production
+
+Après la phase de développement, la plateforme conçue doit être déployée sur le serveur de Kitea SA afin d’être accessible et fonctionnelle pour les utilisateurs. Cette étape est primordiale pour assurer la continuité du service et garantir la qualité du produit livré.
+
+Préparation de l’environnement de production
+La préparation de l’environnement de production consiste à mettre en place toutes les ressources nécessaires pour accueillir la plateforme dans des conditions optimales.
+Dans ce cadre, le serveur de Kitea SA a été configuré avec :
+●	Serveurs adaptés : Un serveur performant a été mis à disposition, avec une capacité suffisante en termes de mémoire, processeur et espace de stockage pour supporter la plateforme et son trafic attendu.
+
+●	Bases de données : Le système de gestion de base de données PostgreSQL a été installé et configuré pour assurer la gestion efficace des données de la plateforme. Des paramètres de performance et de sécurité ont été ajustés pour optimiser son fonctionnement.
+
+●	Sécurité renforcée : Des mesures de sécurité ont été mises en place, notamment l’installation d’un certificat SSL pour sécuriser les échanges entre les utilisateurs et la plateforme via HTTPS. De plus, des règles de pare-feu ont été définies afin de limiter les accès non autorisés au serveur.
+
+●	Sauvegarde et récupération : Un plan de sauvegarde régulière des données a été établi afin de prévenir toute perte en cas de défaillance ou d’incident.
+
+
+
+Déploiement de la plateforme
+
+Le déploiement proprement dit de la plateforme s’est déroulé en plusieurs étapes :
+●	Mise en ligne du code : Le code source a été transféré vers le serveur via un protocole sécurisé, garantissant ainsi l’intégrité des fichiers lors du transfert.
+
+●	Configuration finale : Une fois le code déployé, la plateforme a été configurée pour son fonctionnement en production. Cela inclut la mise en place des variables d’environnement, la connexion à la base de données, ainsi que l’optimisation des paramètres liés aux performances.
+
+●	Tests post-déploiement : Des tests fonctionnels et de performance ont été réalisés pour s’assurer que la plateforme fonctionne correctement et répond aux exigences définies.
+
+●	Mise en service : Après validation, la plateforme a été mise à la disposition des utilisateurs finaux, avec un suivi régulier pour assurer la maintenance et la résolution rapide de tout problème.
