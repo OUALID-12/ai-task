@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Breadcrumbs from './Breadcrumbs';
-import { StatusBadge } from '../ui';
+
 
 const Layout: React.FC = () => {
   const location = useLocation();
@@ -35,10 +35,7 @@ const Layout: React.FC = () => {
               </div>
             </div>
             
-            {/* Indicateur de statut avec design system */}
-            <div className="hidden lg:flex items-center space-x-3">
-              <StatusBadge status="active" />
-            </div>
+
           </div>
           
           {/* Breadcrumbs */}
